@@ -1,0 +1,22 @@
+<!-- <table>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td><img src="{{product.image}}" alt=""></td>
+        </tr>
+    </tbody>
+</table> -->
+
+<div class="container">
+    <div class="card" *ngFor="let product of products">
+      <img src="{{product.image}}" class="card-img-top">
+      <div class="rating">
+        <p>{{product.rating.rate}}/{{product.rating.count}}</p>
+    </div>
+      <div class="card-body">
+        <h6 class="card-title">{{product.category}}</h6>
+        <p class="card-text">{{product.description.slice(1,40)}}....</p>
+        <p class="price">Rs.{{product.price}}</p>
+    </div>
+        
+    
+  </div>

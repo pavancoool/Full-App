@@ -1,0 +1,16 @@
+
+
+<div class="container">
+    <div class="main">
+        <h1>Calculate The Area of Rectangle</h1>
+        <label for="">Length : </label>
+        <input type="number" name="" id="input1" [(ngModel)]="length"><br><br>
+        <label for="">width : </label>
+        <input type="number" name="" id="input2" [(ngModel)]="width"><br><br>
+        <label for=""><strong>Area of Rectangle is : </strong>{{result}}</label><h3 id="result"> </h3><br>
+        <button (click)="sub()" [disabled]="!length || !length">Area</button> &nbsp;&nbsp;
+        <button (click)="per()" [disabled]="!length || !length">Perimeter</button>
+
+
+       
+</div>

@@ -1,0 +1,9 @@
+div{
+    width: 40%;
+    height: auto;
+    text-align: center;
+    margin: 20%;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: aliceblue;
+}

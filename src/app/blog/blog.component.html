@@ -1,0 +1,10 @@
+<div class="container-fluid">
+    <h1 class="blog">Blogs</h1>
+    <div class="card" *ngFor="let blog of blogs">
+        <div class="card-body">
+          <h5 class="card-title">{{blog.title}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{blog.author}}&nbsp;|&nbsp;{{blog.date_published}}</h6>
+          <p class="card-text">{{blog.content}}</p>
+        </div>
+      </div>
+</div>

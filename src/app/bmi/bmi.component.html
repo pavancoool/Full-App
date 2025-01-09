@@ -1,0 +1,12 @@
+<div>
+<h1>BMI Calculater</h1>
+<label for="">Height : </label>
+<input type="text" name="" id="height" placeholder="Enter ur height in meetrs" [(ngModel)]="height"><br><br>
+<label for="">Weight : </label>
+<input type="text" name="" id="weight" placeholder="Enter your weight" [(ngModel)]="weight"><br>
+<br>
+<h3 id="bmi">{{result}}</h3>
+<h3>{{bmi}}</h3>
+<button [disabled]="!height && !weight" (click)="sub()">Calculate</button>
+
+</div>

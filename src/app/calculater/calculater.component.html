@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="main">
+        <h1>Calculation</h1>
+        <label for="">input one : </label>
+        <input type="number" name="" id="input1" [(ngModel)]="input_one"><br><br>
+        <label for="">input two : </label>
+        <input type="number" name="" id="input2" [(ngModel)]="input_two"><br><br>
+        <label for="">Result : {{result}}</label><br><br>
+        <button [disabled]="!input_one || !input_two" (click)="add()">Add</button>&nbsp;
+        <button [disabled]="!input_one || !input_two"  (click)="sub()">Sub</button>&nbsp;
+        <button [disabled]="!input_one || !input_two"  (click)="mul()">Mul</button>&nbsp;
+        <button [disabled]="!input_one || !input_two"  (click)="div()">Div</button>&nbsp;
+        
+    </div>
+</div>
+

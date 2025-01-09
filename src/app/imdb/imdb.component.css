@@ -1,0 +1,38 @@
+.container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: #141414;
+    
+    
+}
+
+.card{
+    width: 50rem;
+    background-color: #222222;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-title{
+    color: #ffb929;
+    text-transform: uppercase;
+   
+}
+
+.card-subtitle{
+    color: white;
+}
+
+.btn-primary{
+    
+    background-color: #212024;
+    border: 2px solid #ffb929;
+    color: #ffb929;
+    font-size: 10px;
+    font-weight: 600;
+
+}

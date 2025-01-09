@@ -1,0 +1,37 @@
+<input type="text" placeholder="search" [(ngModel)]="text" (keyup)="search()">
+
+<button class="btn btn-primary" (click)="freedelivery()">Only free Delivery</button><br>
+
+<button class="btn btn-warning" (click)="sortlowtoheigh()">Price low to high</button>&nbsp;
+<button class="btn btn-warning" (click)="sortheightolow()">Price high to low</button>&nbsp;
+<button class="btn btn-warning" (click)="sortlowtoheighrating()">Rating low to high</button>&nbsp;
+<button class="btn btn-warning" (click)="sortheightolowrating()">Rating high to low</button>&nbsp;
+<br>
+<button class="btn btn-info" (click)="discount()">Apply 50% Discount</button>
+<button class="btn btn-info" (click)="charge()">Price with Delivery Chrges</button> <br>
+<button class="btn btn-dark" (click)="totalprice()">Total Price</button>&nbsp;<button class="btn btn-dark" (click)="totalcartitem()">Total Cart Items</button>
+
+
+<table class="table table-light">
+    <thead>
+        <tr>
+            <th>slno</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Free Delivery</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products let i=index">
+            <td>{{i+1}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.rating}}</td>
+            <td>{{product.FreeDelivery}}</td>
+            <td><button class="btn btn-danger">Delete</button></td>
+        </tr>
+    </tbody>
+
+</table>

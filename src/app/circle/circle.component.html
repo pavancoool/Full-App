@@ -1,0 +1,13 @@
+
+
+<div class="container">
+    <div class="main">
+        <h1>Calculate The Area of Circle</h1>
+        <label for="">Length : </label>
+        <input type="number" name="" id="input1" [(ngModel)]="radius"><br><br>
+        <label for="" ><strong>Area of Circle is : </strong>{{result1}}</label><h3 id="result"> </h3>
+        <label for=""><strong>Perimeter of Circle is : </strong>{{result2}}</label><h3 id="result"> </h3><br>
+        <button (click)="sub()" [disabled]="!radius" >Radius</button>&nbsp;&nbsp;
+        <button (click)="per()" [disabled]="!radius" >Perimeter</button>
+ 
+</div>

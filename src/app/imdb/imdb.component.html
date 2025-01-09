@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="card" *ngFor="let imdb of imdbs">
+        <div class="card-body">
+          <h5 class="card-title">{{imdb.movie}}</h5>
+          <h6 class="card-subtitle mb-2 " >Rating : {{imdb.rating}} <span *ngFor="let star of [].constructor(getStar(imdb.rating))">⭐</span></h6> 
+          <button class="btn-primary">View on IMDb</button>
+          
+        </div>
+      </div> 
+
+</div>

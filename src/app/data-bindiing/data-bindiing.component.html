@@ -1,0 +1,43 @@
+
+<div class="parent">
+
+    <div class="left">
+        <h1>Data-bindiing</h1>
+
+
+        <!-- <label for="">name:</label>
+<input type="text"><br>
+<label for="">Email:</label>
+<input type="email" name="" id=""><br>
+<label for="">Mobile</label>
+<input type="number" name="" id=""><br> -->
+
+        <!-- interpolation -->
+
+        <h3>{{name}}</h3>
+        <h3>{{age}}</h3>
+        <h3>{{email}}</h3>
+
+        <!-- <h3>{{.name}}</h3>
+ <h3>{{user.age}}</h3>
+ <h3>{{user.email}}</h3> -->
+
+        <!-- two way data binding -->
+        <input type="text" name="" id="" [(ngModel)]="phone"><br><br>
+
+
+        <!-- Event binding -->
+        <!-- <input type="text" name="" id="" (keyup)="typing()"><br> -->
+        <button [disabled]="isIndian" (click)="submit()">Submit</button><br><br>
+    </div>
+    <!-- <div class="right">
+        <label for="">num1 : </label>
+        <input type="number" name="" id="" [(ngModel)]="num1"><br>
+        <label for="">num2 : </label>
+        <input type="number" name="" id="" [(ngModel)]="num2"><br>
+        <button [disabled]="!num1 || !num2" (click)="sum()">Sum</button>
+
+        <h3>Sum is :{{result}}</h3>
+    </div> -->
+
+</div>

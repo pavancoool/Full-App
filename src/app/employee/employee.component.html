@@ -1,0 +1,57 @@
+<h1>Employees Details</h1>
+
+<button class="btn btn-info" (click)="hike()">Add 50K Hike</button>
+
+<input type="text" placeholder="Enter Keyword to search" [(ngModel)]="text" (keyup)="search()">
+
+<select [(ngModel)]="role" (change)="roleFilter()"  class="select">
+    <option value="" disabled selected hidden>Sort By Role</option>
+    <option>UIDeveloper</option>
+    <option>Software Developer</option>
+    <option>Data engineer</option>
+    <option>Testing Engineer</option>
+</select>&nbsp;
+
+<button class="btn btn-info" (click)="sort()">Packages heigh to low</button>
+<!-- <button class="btn btn-dark" (click)="sortasc()">Packages low to heigh</button> -->
+ <button class="btn btn-warning" (click)="cost()">Cost of Company</button><br>
+
+ <label for="">Name</label>
+ <input type="text" [(ngModel)]="name" ><br>
+
+ <label for="">Experience</label>
+ <input type="number" [(ngModel)]="experience"><br>
+
+ <label for="">Package</label>
+ <input type="number" [(ngModel)]="package"><br>
+
+ <label for="">Role</label>
+ <input type="text" [(ngModel)]="roles"><br>
+
+ <button class="btn btn-primary" (click)="add()">Add Employee</button>
+
+<table class="table table-light">
+    <thead>
+    <tr>
+        <th>S No</th>
+        <th>Name</th>
+        <th>Experience</th>
+        <th>Package</th>
+        <th>Role</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees; let i=index ">
+            <td>{{i+1}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.experience}}</td>
+            <td>{{employee.package}}</td>
+            <td>{{employee.role}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
