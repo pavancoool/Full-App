@@ -1,0 +1,20 @@
+
+<div class="card">
+    <form action="" [formGroup]="studentForm">
+        <label for="">Name : </label>
+        <input type="text" formControlName="name"><br>
+        <label for=""> Phone : </label>
+        <input type="text" formcontrolName="phone"><br>
+        <label for="">DOB : </label>
+        <input type="text" formcontrolName="dob"><br>
+        <label for="">City : </label>
+        <input type="text" formcontrolName="city"><br>
+        <label for="">Email : </label>
+        <input type="text" formcontrolName="email"><br>
+        <label for="">School City : </label>
+        <input type="text" formcontrolName="school_city"><br>
+        <label for="">School Pin : </label>
+        <input type="text" formcontrolName="school_pin"><br>
+        <button class="btn btn-info" (click)="create()">Create</button>
+    </form>
+</div>

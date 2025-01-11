@@ -1,0 +1,57 @@
+<nav class="nav">
+
+<input type="text" [(ngModel)]="term" (keyup)="filter()" class="input">
+
+<select [(ngModel)]="column">
+    <option>id</option>
+    <option>account_name</option>
+    <option>available_balance</option>
+    <option>account_number</option>
+    <option>city</option>
+</select>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()" class="btn btn-info">Sort</button>
+
+<select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+    <option>40</option>
+    <option>50</option>
+</select>
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+<button (click)="pagenation()" class="btn btn-info">Pagenation</button>
+
+</nav>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Account Name</th>
+            <th>Available Balance</th>
+            <th>Account NUmber</th>
+            <th>City</th>
+            <th>Profile Picture</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts">
+            <td>{{account.id}}</td>
+            <td>{{account.account_name}}</td>
+            <td>{{account.available_balance}}</td>
+            <td>{{account.account_number}}</td>
+            <td>{{account.city}}</td>
+            <td><img src="{{account.profie_picture}}" alt="" width="50px"></td>
+            <td><button class="btn btn-danger" (click)="delete(account.id)"><i class="fa-solid fa-trash"></i></button></td>
+
+        </tr>
+    </tbody>
+</table>

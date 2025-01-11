@@ -1,0 +1,76 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    padding: 20px;
+}
+.card{
+    display: flex;
+    width: 25rem;
+    height: 12rem;    
+    flex-direction: column;
+    border-radius: 10px;
+}
+/* .p-image{
+    display: ;
+    flex-direction: row;
+} */
+.logo{
+    display: flex;
+    justify-content: space-around;
+    background-color: #2f4371;
+    padding: 4px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pro{
+    width: 300px;
+    height: 100px;
+}
+
+.bottom{
+    height: 2rem;
+    background-color: #3d8c41;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 9px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    align-items: center;
+}
+h1{
+    font-size: 5px;
+}
+.profile{
+    width: 60px;
+}
+
+.nav{
+    display: flex;
+    justify-content:center;
+    border: 5px solid goldenrod;
+    gap: 1px;
+    justify-content: space-evenly;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+input{
+    width: 205px;
+}
+select{
+    width: 150px;
+}
+
+button{
+    width: 130px;
+}
+

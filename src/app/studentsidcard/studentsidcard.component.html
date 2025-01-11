@@ -1,0 +1,65 @@
+<div class="nav">
+<input type="text" [(ngModel)]="term" (keyup)="filter()" class="input">
+
+<select [(ngModel)]="column">
+    <option>name</option>
+    <option>phone</option>
+    <option>dob</option>
+    <option>city</option>
+    <option>email</option>
+</select>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()">Sort</button>
+
+<select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+    <option>40</option>
+    <option>50</option>
+</select>
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+<button (click)="pagenation()">Pagenation</button>
+
+<button class="btn btn-info" routerLink="/dashboard/create-student">Create</button>
+</div>
+<div class="container" >
+    <div class="card" *ngFor="let student of students">
+        <div class="logo ">
+        <img src="{{student.school_logo}}"style="width: 40px; height=10px">
+        <div class="schoolname">
+            <h6>{{student.school_name}}</h6>
+        </div>
+        </div >
+        
+        
+        <div class="middle">
+            <div class="t">
+            <table>
+                <tr><td>NAME:</td><td>{{student.name}}</td></tr>
+                <tr><td>PHONE:</td><td>{{student.phone}}</td></tr>
+                <tr><td>DOB:</td><td>{{student.dob}}</td></tr>
+                <tr><td>CITY:</td><td>{{student.city}}</td></tr>
+                <tr><td>Email:</td><td>{{student.email}}</td></tr>
+            </table>
+            </div>
+            <div class="pimage">
+                <img src="{{student.profile_picture}}" alt="" style="width: 100px;">
+            </div> 
+           
+        </div>
+        <div class="bottom">
+            <label>School City: {{student.school_city}}</label>
+            <label>School PIn: {{student.school_pin}}</label>
+        </div>
+        
+    </div>
+        
+  </div>

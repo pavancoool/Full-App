@@ -1,14 +1,45 @@
-<p>vehicle works!</p>
+<div class="nav">
+    <input type="text" [(ngModel)]="term" (keyup)="filter()">
 
-<input type="text" [(ngModel)]="term" (keyup)="filter()">
+<select [(ngModel)]="column">
+    <option>Vehicle</option>
+    <option>manufacturer</option>
+    <option>model</option>
+    <option>type</option>
+    <option>fuel</option>
+</select>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button class="btn btn-primary" (click)="sort()">Sort</button>
+<select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+    <option>40</option>
+    <option>50</option>
+</select>
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+<button (click)="pagenation()">Pagenation</button>
+<button class="btn btn-info" routerLink="/dashboard/create-vehicle">Create</button>
+</div>
 <table class="table table-light">
     <thead>
         <tr>
             <th>Vehicle</th>
             <th>Manufacturer</th>
             <th>Model</th>
+            <th>Cost</th>
             <th>Type</th>
+            <th>Color</th>
             <th>Fuel</th>
+            <th>Image</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -16,8 +47,12 @@
             <td>{{vehicle.Vehicle}}</td>
             <td>{{vehicle.manufacturer}}</td>
             <td>{{vehicle.model}}</td>
+            <td>{{vehicle.cost}}</td>
             <td>{{vehicle.type}}</td>
+            <td>{{vehicle.color}}</td>
             <td>{{vehicle.fuel}}</td>
+            <td><img src="{{vehicle.image}}" alt="" style="width: 50px;"></td>
+            <td><button class="btn btn-danger" (click)="delete(vehicle.id)"><i class="fa-solid fa-trash"></i></button></td>
         </tr>
     </tbody>
 </table>

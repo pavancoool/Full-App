@@ -1,12 +1,17 @@
-<h1>hi</h1>
 <div class="container">
-    <div class="card" *ngFor="let weather of weathers">
+    <div class="card">
         <h1>Weather in Hyderabad</h1>
-        <h3>{{weather.latitude}}</h3>
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h3></h3>
+        <div class="card-body" [ngClass]="{'blue' :weathers.current_weather.temprature <0,'yellow' :weathers.current_weather.temprature>0 
+          && weathers.current_weather.temprature<=30,'green':weathers.current_weather.temprature >30,'red':weathers.current_weather.temprature>35}">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <circle r="25" cx="30" cy="30" fill="red" /> 
+          </svg> 
+          <h1>{{weathers.current_weather.temprature}}</h1>
         </div>
+        <h4>Wind Speed :{{weathers.current_weather.windspeed}}&nbsp;km</h4>
+        <h4>Wind Speed :{{weathers.current_weather.winddirection}}&nbsp;NE</h4>
+        <p>{{weathers.current_weather.is_day === 1 ? 'Daytime' : 'Nightime' }}</p>
+        
       </div>
 </div>

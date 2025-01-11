@@ -9,7 +9,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CalculaterComponent } from './calculater/calculater.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DataBindiingComponent } from './data-bindiing/data-bindiing.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { DirectivesComponent } from './directives/directives.component';
@@ -25,6 +25,10 @@ import { WeatherComponent } from './weather/weather.component';
 import { BlogComponent } from './blog/blog.component';
 import { ImdbComponent } from './imdb/imdb.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentsidcardComponent } from './studentsidcard/studentsidcard.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 @NgModule({
   declarations: [
@@ -48,13 +52,18 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     WeatherComponent,
     BlogComponent,
     ImdbComponent,
-    UserprofileComponent
+    UserprofileComponent,
+    AccountsComponent,
+    CreateVehicleComponent,
+    StudentsidcardComponent,
+    CreateStudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

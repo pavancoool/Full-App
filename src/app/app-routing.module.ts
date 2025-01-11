@@ -20,6 +20,10 @@ import { WeatherComponent } from './weather/weather.component';
 import { BlogComponent } from './blog/blog.component';
 import { ImdbComponent } from './imdb/imdb.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { StudentsidcardComponent } from './studentsidcard/studentsidcard.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -41,7 +45,12 @@ const routes: Routes = [
     {path:'weather',component:WeatherComponent},
     {path:'blog',component:BlogComponent},
     {path:'imdb',component:ImdbComponent},
-    {path:'userprofile',component:UserprofileComponent}
+    {path:'userprofile',component:UserprofileComponent},
+    {path:'account',component:AccountsComponent},
+    {path:'create-vehicle',component:CreateVehicleComponent},
+    {path:'student',component:StudentsidcardComponent},
+    {path:'create-student',component:CreateStudentComponent},
+  
   ]},
   /* {path:'**',component:ErrorComponent} */
   
