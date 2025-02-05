@@ -1,57 +1,94 @@
 <h1>Employees Details</h1>
+<div class="container-fluid">
 
-<button class="btn btn-info" (click)="hike()">Add 50K Hike</button>
 
-<input type="text" placeholder="Enter Keyword to search" [(ngModel)]="text" (keyup)="search()">
 
-<select [(ngModel)]="role" (change)="roleFilter()"  class="select">
-    <option value="" disabled selected hidden>Sort By Role</option>
-    <option>UIDeveloper</option>
-    <option>Software Developer</option>
-    <option>Data engineer</option>
-    <option>Testing Engineer</option>
-</select>&nbsp;
+    <div class="container">
+        <div class="top">
 
-<button class="btn btn-info" (click)="sort()">Packages heigh to low</button>
-<!-- <button class="btn btn-dark" (click)="sortasc()">Packages low to heigh</button> -->
- <button class="btn btn-warning" (click)="cost()">Cost of Company</button><br>
+            <div class="c1">
+                <button class="btn btn-info" (click)="hike()">Add 50K Hike</button>
+            </div>
 
- <label for="">Name</label>
- <input type="text" [(ngModel)]="name" ><br>
+            <div class="c1">
+                <input type="text" placeholder="Enter Keyword to search" [(ngModel)]="text" (keyup)="search()">
+            </div>
 
- <label for="">Experience</label>
- <input type="number" [(ngModel)]="experience"><br>
+            <div class="c1">
+                <select [(ngModel)]="role" (change)="roleFilter()" class="select">
+                    <option value="" disabled selected hidden>Sort By Role</option>
+                    <option>UIDeveloper</option>
+                    <option>Software Developer</option>
+                    <option>Data engineer</option>
+                    <option>Testing Engineer</option>
+                </select>&nbsp;
+            </div>
 
- <label for="">Package</label>
- <input type="number" [(ngModel)]="package"><br>
+            <div class="c1">
+                <button class="btn btn-info" (click)="sort()">Packages heigh to low</button>
+            </div>
+            <!-- <button class="btn btn-dark" (click)="sortasc()">Packages low to heigh</button> -->
+            <div class="c1">
+                <button class="btn btn-warning" (click)="cost()">Cost of Company</button><br>
+            </div>
 
- <label for="">Role</label>
- <input type="text" [(ngModel)]="roles"><br>
 
- <button class="btn btn-primary" (click)="add()">Add Employee</button>
+        </div>
+        
+        <div class="down">
+            <div class="c2">
+                <label for="">Name:</label>
+                <input type="text" [(ngModel)]="name"><br>
+            </div>
 
-<table class="table table-light">
-    <thead>
-    <tr>
-        <th>S No</th>
-        <th>Name</th>
-        <th>Experience</th>
-        <th>Package</th>
-        <th>Role</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let employee of employees; let i=index ">
-            <td>{{i+1}}</td>
-            <td>{{employee.name}}</td>
-            <td>{{employee.experience}}</td>
-            <td>{{employee.package}}</td>
-            <td>{{employee.role}}</td>
-            <td>
-                <button class="btn btn-danger" (click)="delete(i)">Delete</button>
-            </td>
-        </tr>
-    </tbody>
+            <div class="c2">
+                <label for="">Experience:</label>
+                <input type="number" [(ngModel)]="experience"><br>
+            </div>
 
-</table>
+            <div class="c2">
+                <label for="">Package:</label>
+                <input type="number" [(ngModel)]="package"><br>
+            </div>
+
+            <div class="c2">
+                <label for="">Role:</label>
+                <input type="text" [(ngModel)]="roles"><br>
+            </div>
+
+            <div class="c2">
+                <button class="btn btn-primary addemployee" (click)="add()">Add Employee</button>
+            </div>
+
+        </div>
+        
+    </div>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>S No</th>
+                <th>Name</th>
+                <th>Experience</th>
+                <th>Package</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees; let i=index ">
+                <td>{{i+1}}</td>
+                <td>{{employee.name}}</td>
+                <td class="rating">{{employee.experience}}&nbsp;
+                    <app-rating [rating]="employee.experience"></app-rating>
+                </td>
+                <td>{{employee.package}}</td>
+                <td>{{employee.role}}</td>
+                <td>
+                    <button class="btn btn-danger del" (click)="delete(i)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>

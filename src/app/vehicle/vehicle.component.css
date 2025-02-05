@@ -16,3 +16,17 @@ select{
 button{
     width: 130px;
 }
+
+.info{
+    width: 40px;
+}
+
+.table th{
+    text-align: center;
+    border: 2px solid black;
+}
+
+.table td{
+    border: 1px solid gold;
+}
+

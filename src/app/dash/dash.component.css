@@ -19,7 +19,7 @@ hr{
 .parent{
     width: 100vw;
     height: 100vh;
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
 
 }
@@ -31,9 +31,12 @@ hr{
     color: white;
     text-align: left;
     padding-left: 30px;
+    overflow:auto;
+    overscroll-behavior-inline:contain;
 }
 h3,h1{
 line-height: 40px;
+
 }
 
 button{
@@ -48,6 +51,10 @@ button{
 .right{
     width: 82%;
     height: 100%;
-    background-color: grey;
+    /* display: flex; */
     overflow: auto;
+}
+
+h4{
+    font-size:medium;
 }

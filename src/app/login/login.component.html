@@ -4,16 +4,16 @@
         alt="">
     </div>
     <div class="shadow p-3 mb-5 bg-body rounded down">
-        
+        <form action="" [formGroup]="loginForm">
         <h3>Sign in </h3>
         <h4 class="dis">Stay updated on your professional world</h4>
 
         <!-- <input class="form-control" type="text" placeholder="Email or Phone"> -->
         
-        <input type="text" name="" id="" placeholder="Email or Phone"><br>
-        <input type="password" name="" id="" placeholder="Password"><label class="show"><a href="">show</a></label><br>
+        <input type="text" name="" id="" placeholder="Email or Phone"  formControlName="email"><br>
+        <input type="password" name="" id="" placeholder="Password" formControlName="password"><label class="show"><a href=""  >show</a></label><br>
         <h6><a href="">Forgot password?</a></h6>
-        <button type="button" class="btn btn-primary">Sign in</button>
+        <button type="button" class="btn btn-primary"  (click)="login()">Sign in</button>
 
         <div class="h">
             <hr>
@@ -21,6 +21,7 @@
             <hr>
         </div>
         <button type="button" class="btn btn-light"><i class="fa-brands fa-apple"></i> Signin With Apple</button>
+        </form>
     </div>
     <p class="join">New to Linkedin? <a href="" class="joinnow">Join now</a></p>
 </div>

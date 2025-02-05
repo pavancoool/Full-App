@@ -10,13 +10,20 @@ export class StudentsidcardComponent {
   students:any=[];
        term:string="";
         constructor(private _studentService:StudentsidcardService){
-          _studentService.getstudent().subscribe(
+          this.pageload();
+
+        }
+
+        pageload(){
+          this._studentService.getstudent().subscribe(
             (data:any)=>{
               this.students=data;
               console.log(this.students);
             }
           )
         }
+          
+        
         
         filter(){
           this._studentService.getFilteredStudent(this.term).subscribe(
@@ -53,5 +60,20 @@ export class StudentsidcardComponent {
             alert("Internal server Error")
           }
         )
+        }
+
+        delete(id:number){
+          if(confirm("Are You sure to delete?")==true){
+            this._studentService.deleteStudent(id).subscribe(
+              (data:any)=>{
+                alert("Record Dleted Successfullt");
+                this.pageload();
+              },(err:any)=>{
+                alert("internal Server Error");
+              }
+            )
+          }else{
+            alert("you have cancelled")
+          }
         }
 }

@@ -1,0 +1,93 @@
+<h1>Student Details</h1>
+
+<div class="container">
+    
+<form action="" [formGroup]="userForm">
+
+    <!-- <div class="row mb-4">
+        <label for="colFormLabelSm" class="col-sm-1 col-form-label col-form-label-sm">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+        </div>
+    </div> -->
+
+    <label>Name</label>
+    <input type="text" name="name" id="name" formControlName="name"><br>
+
+    <label>Class</label>
+    <input type="number" name="class" id="class" formControlName="email"><br>
+
+    <label>Father Name</label>
+    <input type="text" name="fatherName" id="fatherName" formControlName="fathername"><br>
+
+    <label>Mobile number</label>
+    <input type="number" name="mobile" id="mobile" formControlName="mobile"><br>
+    <div *ngIf="userForm.get('mobile')?.invalid && userForm.get('mobile')?.touched">
+        <p *ngIf="userForm.get('mobile')?.errors?.['required']">Mobile Number is Required</p>
+        <p *ngIf="userForm.get('mobile')?.errors?.['min']">10 digts minimum Required</p>
+        <p *ngIf="userForm.get('mobile')?.errors?.['max']">max 10 digits Required</p>
+    </div>
+
+    <label>Email</label>
+    <input type="email" name="email" id="email" formControleName="email"><br>
+
+    <label>DOB</label>
+    <input type="date" name="dob" id="dob" formControleName="dob"><br>
+
+    <div formGroupName="address">
+        <label for="addressLine">Address Line</label> 
+        <input type="text" formControlName="addressline"><br>
+
+        <label for="district">City</label> 
+        <input type="text" formControlName="city"><br> 
+
+        <label for="state">State</label>
+        <input type="text" formControlName="state"><br>
+
+        <label for="pincode">Pincode</label>
+        <input type="number" formControlName="pincode"><br>
+       <!--  <div *ngIf="userForm.get('address').get('pincode')?.invalid && userForm.get('address').get('pincode')?.touched">
+            <p *ngIf=""></p>
+        </div> -->
+    </div>
+    <br>
+    
+    <label>Type</label>
+    <input type="radio" name="type" formControlName="type" value="dayscholer">
+    <label>Dsayscholer</label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+    <label>Hostal</label><br>
+
+    <div  *ngIf="userForm.get('type')?.value=='dayscholer'">
+        <label>Bus Fee : </label>
+        <input type="number" formControlName="busfee">
+    </div>
+    
+    <div *ngIf="userForm.get('type')?.value=='residential'"> 
+        <label >Hostal Fee : </label>
+        <input type="number" formControlName="hostelfee">
+    </div>
+    
+    <button (click)="addcard()">Add Marks</button>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+                <h2>Marks {{i+1}}</h2>
+                <label for="">Class</label>
+                <input type="number" formControlName="class"><br>
+
+                <label for="">year: </label>
+                <input type="number" min="1900" max="2099" step="1" value="" formControlName="year"><br>
+                
+                <label for="">percentage: </label>
+                <input type="number" formControlName="percentage"><br>
+                <button (click)="delete(i)">Delete Marks</button>
+
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="create()">Create</button><br>
+</form>
+</div>

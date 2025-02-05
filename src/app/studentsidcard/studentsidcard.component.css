@@ -9,7 +9,7 @@
 .card{
     display: flex;
     width: 25rem;
-    height: 12rem;    
+    height: 13rem;    
     flex-direction: column;
     border-radius: 10px;
 }
@@ -21,14 +21,16 @@
     display: flex;
     justify-content: space-around;
     background-color: #2f4371;
-    padding: 4px;
+    padding: 3px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    align-items: center;
 }
 .middle{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    
 }
 .pro{
     width: 300px;
@@ -70,7 +72,28 @@ select{
     width: 150px;
 }
 
-button{
+/* button{
     width: 130px;
+} */
+
+.info{
+    width: 10px;
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-color: #2f4371;
+    
+}
+
+.btn-danger{
+    background-color: darkred;
+}
+
+.action{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 

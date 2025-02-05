@@ -1,0 +1,11 @@
+
+
+<div class="container">
+    <h1>Textarea works!</h1><br>
+<textarea cols="50" rows="5" (input)="onTextChange($event)" [(ngModel)]="text" maxlength={{max}}></textarea>
+
+<div class="count">{{textCount}}/{{max}} <br></div>
+<h5 *ngIf="textCount==max">You have reached max Character limit</h5>
+</div>
+
+

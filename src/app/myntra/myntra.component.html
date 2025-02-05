@@ -10,7 +10,9 @@
     <div class="card" *ngFor="let product of products">
       <img src="{{product.image}}" class="card-img-top">
       <div class="rating">
-        <p>{{product.rating.rate}}/{{product.rating.count}}</p>
+        <p>{{product.rating.rate}}/{{product.rating.count}}
+          <br><app-rating [rating]="product.rating.rate"></app-rating>
+        </p>
     </div>
       <div class="card-body">
         <h6 class="card-title">{{product.category}}</h6>

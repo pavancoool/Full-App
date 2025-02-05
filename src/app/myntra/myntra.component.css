@@ -17,7 +17,7 @@
     height: 200px;
 }
 .rating{
-    width: 40px;
+    width: auto;
     height: 20px;
     font-size: 10px;
     background-color: gray;
@@ -25,6 +25,8 @@
     position: absolute;
     left: 10px;
     top: 185px;
+    line-height: 10px;
+    color: whitesmoke;
 
 }
 

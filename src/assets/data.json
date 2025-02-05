@@ -1,0 +1,134 @@
+[
+    {
+        "Vehicle": "Dodge XTS",
+        "manufacturer": "Chrysler",
+        "model": "Altima",
+        "type": "Cargo Van",
+        "fuel": "dndjasksmsmwsmm",
+        "color": "turquoise",
+        "image": "https://loremflickr.com/640/480/transport",
+        "cost": "397.00",
+        "id": "29"
+      },
+      {
+        "Vehicle": "Fiat Accord",
+        "manufacturer": "Jeep",
+        "model": "Camry",
+        "type": "Passenger Van",
+        "fuel": "Gasoline",
+        "color": "teal",
+        "image": "https://loremflickr.com/640/480/sports",
+        "cost": "276.00",
+        "id": "30"
+      },
+      {
+        "Vehicle": "Maserati PT Cruiser",
+        "manufacturer": "Kia",
+        "model": "1",
+        "type": "Sedan",
+        "fuel": "Gasoline",
+        "color": "turquoise",
+        "image": "https://loremflickr.com/640/480/people",
+        "cost": "297.00",
+        "id": "31"
+      },
+      {
+        "Vehicle": "Lamborghini Impala",
+        "manufacturer": "Nissan",
+        "model": "ATS",
+        "type": "Cargo Van",
+        "fuel": "Diesel",
+        "color": "azure",
+        "image": "https://loremflickr.com/640/480/transport",
+        "cost": "55.00",
+        "id": "32"
+      },
+      {
+        "Vehicle": "Tesla Beetle",
+        "manufacturer": "Fiat",
+        "model": "Spyder",
+        "type": "Extended Cab Pickup",
+        "fuel": "Diesel",
+        "color": "yellow",
+        "image": "https://loremflickr.com/640/480/food",
+        "cost": "811.00",
+        "id": "33"
+      },
+      {
+        "Vehicle": "Chrysler Escalade",
+        "manufacturer": "Nissan",
+        "model": "CX-9",
+        "type": "Cargo Van",
+        "fuel": "Hybrid",
+        "color": "magenta",
+        "image": "https://loremflickr.com/640/480/transport",
+        "cost": "443.00",
+        "id": "34"
+      },
+      {
+        "Vehicle": "Mercedes Benz A4",
+        "manufacturer": "Cadillac",
+        "model": "CX-9",
+        "type": "Sedan",
+        "fuel": "Hybrid",
+        "color": "blue",
+        "image": "https://loremflickr.com/640/480/technics",
+        "cost": "502.00",
+        "id": "35"
+      },
+      {
+        "Vehicle": "Cadillac V90",
+        "manufacturer": "Ford",
+        "model": "Civic",
+        "type": "Hatchback",
+        "fuel": "Electric",
+        "color": "plum",
+        "image": "https://loremflickr.com/640/480/business",
+        "cost": "687.00",
+        "id": "36"
+      },
+      {
+        "Vehicle": "Jeep A8",
+        "manufacturer": "Dodge",
+        "model": "Expedition",
+        "type": "Wagon",
+        "fuel": "Gasoline",
+        "color": "fuchsia",
+        "image": "https://loremflickr.com/640/480/technics",
+        "cost": "350.00",
+        "id": "37"
+      },
+      {
+        "Vehicle": "Volkswagen Challenger",
+        "manufacturer": "Mini",
+        "model": "Challenger",
+        "type": "SUV",
+        "fuel": "Gasoline",
+        "color": "orchid",
+        "image": "https://loremflickr.com/640/480/business",
+        "cost": "900.00",
+        "id": "39"
+      },
+      {
+        "Vehicle": "Fiat Model 3",
+        "manufacturer": "Jeep",
+        "model": "PT Cruiser",
+        "type": "Convertible",
+        "fuel": "Gasoline",
+        "color": "magenta",
+        "image": "https://loremflickr.com/640/480/people",
+        "cost": "422.00",
+        "id": "41"
+      },
+      {
+        "Vehicle": "Jaguar Camry",
+        "manufacturer": "Polestar",
+        "model": "CX-9",
+        "type": "Convertible",
+        "fuel": "Gasoline",
+        "color": "white",
+        "image": "https://loremflickr.com/640/480/city",
+        "cost": "603.00",
+        "id": "42"
+      }
+]

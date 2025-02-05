@@ -1,0 +1,134 @@
+/* .container-fluid{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.text{
+    width: 90%;
+    height: 33px;
+    margin-top: 30px;
+}
+i{
+    text-align: center;
+}
+
+.add{
+    width: 90%;
+}
+
+
+table{
+    width: 90%;
+    height: 33px;
+    margin-top: 30px;
+}
+
+.touch{
+    text-decoration:line-through;
+}
+
+.touch1{
+    text-decoration: none;
+}
+
+
+
+.done {
+    text-decoration: line-through;
+    color: gray;
+    cursor: pointer;
+  }
+
+.delete{
+    background-color: red;
+    width: 30%;
+} */
+
+.container-fluid{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://c1.wallpaperflare.com/preview/127/366/443/library-book-bookshelf-read.jpg") ;
+    color: white;
+    padding: 70px;
+}
+.container {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+    border: 1px solid goldenrod;
+    height: auto;
+    margin-bottom: 20px;
+    
+  }
+
+  h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px double goldenrod;
+    padding: 15px;
+    background-color: aliceblue;
+    color: black;
+    opacity: 0.8;
+  }
+  
+  input {
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+   .add{
+    margin-left: -110px;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
+  
+  
+  .done {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 0px,0px,0px,0px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .table{
+    background-color: aliceblue;
+    border-bottom: none;
+    color: whitesmoke;
+    background-image: url("https://images.unsplash.com/photo-1578589335615-9e804277a5af?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ym9va3MlMjBhbmQlMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D");   
+}
+
+  th{
+    text-decoration: underline;
+  }
+
+  td{
+    border-style: none;
+  }
